@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vap/location.dart';
+import 'package:vap/login.dart';
 import 'package:vap/sini_up.dart';
 
 class Home extends StatelessWidget {
@@ -95,6 +96,21 @@ class Home extends StatelessWidget {
                       minimumSize: Size(300, 50)),
                 ),
               ),
+              SizedBox(height: 20),
+              Container(
+                child: ElevatedButton(
+                  onPressed: () {
+                       Navigator.push(context, MaterialPageRoute(builder: (context) => Chalange()));
+                  },
+                  child: Text('LOGIN'),
+                  style: ElevatedButton.styleFrom(
+                      primary: Colors.grey,
+                      onPrimary: Colors.deepOrangeAccent,
+                      onSurface: Colors.grey,
+                      padding: EdgeInsets.all(10.0),
+                      minimumSize: Size(300, 50)),
+                ),
+              ),
             ],
           ),
         ],
@@ -102,3 +118,4 @@ class Home extends StatelessWidget {
     );
   }
 }
+

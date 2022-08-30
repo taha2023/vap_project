@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "392205303480",
+    "project_id": "firsebase-has",
+    "storage_bucket": "firsebase-has.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:392205303480:android:2ad50b0a8097f099e33e4d",
+        "android_client_info": {
+          "package_name": "com.example.vap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "392205303480-0qrtrkaedhoqdc6snev1n9i8a54m0bgn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrgkYL9efIpQCZ4lw4ab38tSXrk80nRhI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "392205303480-0qrtrkaedhoqdc6snev1n9i8a54m0bgn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
