@@ -6,7 +6,6 @@ class Hotels extends StatefulWidget {
   @override
   State<Hotels> createState() => _HotelsState();
 }
-
 class _HotelsState extends State<Hotels> {
   @override
   Widget build(BuildContext context) {
@@ -15,9 +14,15 @@ class _HotelsState extends State<Hotels> {
         preferredSize: Size.fromHeight(150),
         child: AppBar(
             title: Text("Venice, italy"),
-
-      ),
-      ),
-    );
-  }
+            actions: <Widget>[
+            IconButton(
+             icon: const Icon(Icons.search),
+             tooltip: 'Comment Icon',
+             onPressed: () {},
+          ),
+         ]
+        ),
+       ),
+     );
+   }
 }

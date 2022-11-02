@@ -28,7 +28,7 @@ class Home extends StatelessWidget {
               SizedBox(height: 10),
               Text(
                 'Welcome to APPDESIGN',
-                style: TextStyle(
+                  style: TextStyle(
                   fontFamily: 'pacifico',
                   fontSize: 10,
                 ),
@@ -77,7 +77,6 @@ class Home extends StatelessWidget {
                       onSurface: Colors.grey,
                       padding: EdgeInsets.all(10.0),
                       minimumSize: Size(300, 50)),
-
                 ),
               ),
               SizedBox(height: 20),
