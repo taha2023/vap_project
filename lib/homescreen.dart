@@ -8,7 +8,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: FlatButton(child: Text('Logout'),onPressed: (){
+      body: Center(child: TextButton(child: Text('Logout'),onPressed: (){
         auth.signOut();
         Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Chalange()));
       },),),

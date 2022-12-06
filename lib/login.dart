@@ -3,12 +3,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:vap/homescreen.dart';
 
-// void main() async {
-//   WidgetsFlutterBinding.ensureInitialized();
-//   await Firebase.initializeApp();
-
-// }
-
 class Chalange extends StatefulWidget {
   const Chalange({Key? key}) : super(key: key);
 
@@ -65,12 +59,9 @@ class _ChalangeState extends State<Chalange> {
                     print(auth.currentUser!.uid);
                   } on FirebaseAuthException catch (e) {
                     if (e.code == 'user-not-found') {
-                      //ScaffoldMessenger.of(context).showSnackBar(snac('User not found'));
                       print('No user found for that email.');
                     } else if (e.code == 'wrong-password') {
-                      // ScaffoldMessenger.of(context).showSnackBar(snac('Wrong Password'));
                     }
-
                     print('Wrong password provided for that user.');
                   }
                 }),
@@ -85,11 +76,8 @@ class _ChalangeState extends State<Chalange> {
                 } on FirebaseAuthException catch (e) {
                   if (e.code == 'weak-password') {
                     print('weak pass');
-                    //ScaffoldMessenger.of(context).showSnackBar(snac('weak password'));
                   } else if (e.code == 'email-already-in-use') {
                     print('email exist');
-                    // ScaffoldMessenger.of(context)
-                    //     .showSnackBar(snac('email already in use'));
                   }
                 }
               },

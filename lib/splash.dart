@@ -26,8 +26,7 @@ class _SplashState extends State<Splash> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Container(
-          decoration: BoxDecoration(
+        child: Container(          decoration: BoxDecoration(
             color: Color(0xFFe6e9ed),
             image: DecorationImage(
               image: AssetImage('assets/images/vacation.jpeg'),

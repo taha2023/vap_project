@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:validators/validators.dart' as validator;
 import 'package:email_validator/email_validator.dart';
-
+import 'package:flutter/src/material/scaffold.dart';
 
 class SiniUp extends StatefulWidget {
   const SiniUp({Key? key}) : super(key: key);
@@ -17,9 +17,6 @@ class _SiniUpState extends State<SiniUp> {
   TextEditingController inputController = new TextEditingController();
   final formKey = GlobalKey<FormState>();
   final ScaffoldKey = GlobalKey<ScaffoldState>();
-
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +58,6 @@ class _SiniUpState extends State<SiniUp> {
               ),
             ),
             SizedBox(height: 30),
-
                Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 90),
                 child: TextFormField(
@@ -79,11 +75,9 @@ class _SiniUpState extends State<SiniUp> {
                     validator: (value){
                       if(value!.isEmpty || !int.parse(value).isNaN){
                         return "Name required";
-                        
                       }
                       return null;
                     }
-
                 ),
               ),
 
@@ -178,18 +172,9 @@ class _SiniUpState extends State<SiniUp> {
 
               onPressed: () {
                 print("Password: " + _passwordController.text);
-                // setState(() {
-                //   if(password==ConfirmPasswored){
-                //       isVisible= false;
-                //     }else{
-                //       isVisible= true;
-                //     }
-                //   }
-                // );
-
                 setState(() {
                   if(formKey.currentState!.validate()){
-                    ScaffoldKey.currentState!.showSnackBar(SnackBar(
+                    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                       content: Text('Store data local or on the server',
                     ),
                     ));
